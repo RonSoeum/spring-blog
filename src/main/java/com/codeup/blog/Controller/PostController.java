@@ -1,10 +1,7 @@
 package com.codeup.blog.Controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class PostController {
@@ -21,13 +18,13 @@ public class PostController {
     }
     @GetMapping("/posts/create")
     @ResponseBody
-    public String createForm() {
+    public String form() {
         return "Create a post with this form.";
     }
     @PostMapping("/posts/create")
     @ResponseBody
-    public String createPost() {
-        return "Create a new post with this post request.";
+    public String createPost(@RequestParam("post") String post) {
+        return "Create a new post with this post request.\nTest: " + post;
     }
 
 }// class

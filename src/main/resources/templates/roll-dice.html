@@ -3,37 +3,43 @@
 <head>
     <meta charset="UTF-8" />
     <title>Roll-Dice</title>
+    <style>
+
+    </style>
 </head>
 <body>
-
+    <nav th:fragment="navbar">
+        <div class="topnav">
+            <a class="active" href="#home">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+        </div>
+    </nav>
     <ul>
         <li>
-            <a href="/roll-dice/1">Guess 1 for dice roll</a>
+            <a href="/roll-dice?guess=1">Guess 1 for dice roll</a>
         </li>
         <li>
-            <a href="/roll-dice/2">Guess 2 for dice roll</a>
+            <a href="/roll-dice?guess=2">Guess 2 for dice roll</a>
         </li>
         <li>
-            <a href="/roll-dice/3">Guess 3 for dice roll</a>
+            <a href="/roll-dice?guess=3">Guess 3 for dice roll</a>
         </li>
         <li>
-            <a href="/roll-dice/4">Guess 4 for dice roll</a>
+            <a href="/roll-dice?guess=4">Guess 4 for dice roll</a>
         </li>
         <li>
-            <a href="/roll-dice/5">Guess 5 for dice roll</a>
+            <a href="/roll-dice?guess=5">Guess 5 for dice roll</a>
         </li>
         <li>
-            <a href="/roll-dice/6">Guess 6 for dice roll</a>
+            <a href="/roll-dice?guess=6">Guess 6 for dice roll</a>
         </li>
     </ul>
-
 
     <h1>Your Guess: <span th:text="${guess}"></span></h1>
     <h1>Dice Roll: <span th:text="${diceRoll}"></span></h1>
     <h1>Result: <span th:text="${result}"></span></h1>
-
-
-
 
 </body>
 </html>
