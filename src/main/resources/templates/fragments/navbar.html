@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<body>
+    <th:block th:fragment="navbar">
+        <div class="navbar">
+            <div class="nav-logo">RON SOEUM</div>
+            <div class="nav-link-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav class="nav-items">
+                <div class="nav-link">
+                    <a th:href="@{/}">Home</a>
+                </div>
+                <div class="nav-link">
+                    <a th:href="@{/roll-dice}">Roll Dice</a>
+                </div>
+                <div class="nav-link">
+                    <a th:href="@{/posts}">Post Index</a>
+                </div>
+                <div class="nav-link">
+                    <a th:href="@{/posts/create}">Create Post</a>
+                </div>
+                <div class="nav-link">
+                    <a class="active" href="#">LOG IN</a>
+                </div>
+            </nav>
+        </div>
+    </th:block>
+</body>
+</html>

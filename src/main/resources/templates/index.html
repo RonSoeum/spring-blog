@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="fragments/header :: header('Home!')">
+</head>
+    <link rel="stylesheet" th:href="@{/css/home.css}" />
+<body>
+
+    <div th:replace="fragments/navbar :: navbar"></div>
+
+    <section class="sec1">
+        <div class="intro">
+            <h1>Hello, I'm <span>Ron Soeum</span>.</h1>
+            <h1>I'm a software developer.</h1>
+            <div class="flex">
+                <button type="button" class="">Portfolio <i class="fas fa-laptop-code"></i></button>
+                <button type="button" class="">About Me <i class="fas fa-user ml-1"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="content">
+        <h3>About Me</h3>
+        <p>One of the most satisfying aspects of programming is creating something out of nothing that is useful to people, especially if it improves their lives in some way. I love the challenge of problem-solving, there is a sense of fulfillment after finding a creative solution. The ever-evolving nature of web development keeps me engaged with new technologies, and there is no limit to what I can learn to improve my craft.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ea in nihil non praesentium recusandae voluptatem. Asperiores, deleniti dolore eum labore magni, odit, praesentium quas quasi reprehenderit sed sequi voluptas?</p>
+
+    </section>
+
+    <div th:replace="fragments/footer :: footer"></div>
+    <div th:replace="fragments/scripts :: scripts"></div>
+    <script type="text/javascript" th:src="@{/scripts/index.nav.js}"></script>
+
+</body>
+</html>
