@@ -82,21 +82,21 @@ section.sec1 {
 .intro span {
     color: #ff0000;
 }
-.content {
-    margin-top: 80px;
-}
-.content h3 {
-    width: 80%;
-    margin: 30px auto;
-    text-align: justify;
-    line-height: 30px;
-}
-.content p {
-    width: 80%;
-    margin: 30px auto;
-    text-align: justify;
-    line-height: 30px;
-}
+/*.content {*/
+    /*margin-top: 80px;*/
+/*}*/
+/*.content h3 {*/
+    /*width: 80%;*/
+    /*margin: 30px auto;*/
+    /*text-align: justify;*/
+    /*line-height: 30px;*/
+/*}*/
+/*.content p {*/
+    /*width: 80%;*/
+    /*margin: 30px auto;*/
+    /*text-align: justify;*/
+    /*line-height: 30px;*/
+/*}*/
 .flex {
     display: flex;
     justify-content: center;
