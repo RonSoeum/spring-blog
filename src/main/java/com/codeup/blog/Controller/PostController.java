@@ -1,15 +1,9 @@
 package com.codeup.blog.Controller;
 import com.codeup.blog.Post.Post;
 import com.codeup.blog.Post.PostRepository;
-import com.codeup.blog.Post.PostsList;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
 
 @Controller
 public class PostController {
@@ -42,13 +36,13 @@ public class PostController {
     }
 
     @GetMapping("/posts/create")
-    public String form() {
+    public String showCreateForm(Model model) {
+        model.addAttribute("post", new Post());
         return "posts/create";
     }
 
     @PostMapping("/posts/create")
-    public String createPost(@RequestParam("title") String title, @RequestParam("body") String body, Model model) {
-        Post post = new Post(title, body);
+    public String createPost(@ModelAttribute Post post) {
         postDao.save(post);
         return "redirect:/posts";
     }
@@ -60,10 +54,7 @@ public class PostController {
     }
 
     @PostMapping("/posts/edit/{id}")
-    public String editPost(@PathVariable long id, @RequestParam("title") String title, @RequestParam("body") String body) {
-        Post post = postDao.findOne(id);
-        post.setTitle(title);
-        post.setBody(body);
+    public String editPost(@PathVariable long id, @ModelAttribute Post post) {
         postDao.save(post);
         return "redirect:/posts/" + id;
     }

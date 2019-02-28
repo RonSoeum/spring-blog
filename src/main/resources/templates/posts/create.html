@@ -74,13 +74,13 @@
 
 <main>
     <div class="container">
-        <form method="post" th:action="@{/posts/create}">
+        <form th:method="post" th:action="@{/posts/create}" th:object="${post}">
             <div class="row">
                 <div class="col-25">
                     <label for="title">Title</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="title" name="title" placeholder="Your title.." />
+                    <input type="text" id="title" th:field="*{title}" placeholder="Your title.." />
                 </div>
             </div>
             <!--<div class="row">-->
@@ -108,7 +108,7 @@
                     <label for="body">Body</label>
                 </div>
                 <div class="col-75">
-                    <textarea id="body" name="body" placeholder="Write body.." style="height:200px"></textarea>
+                    <textarea id="body" th:field="*{body}" placeholder="Write body.." style="height:200px"></textarea>
                 </div>
             </div>
             <div class="row">

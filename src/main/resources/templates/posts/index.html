@@ -11,10 +11,10 @@
         <div th:each="post : ${posts}">
             <h3>
                 <a th:href="@{/posts/{id}(id=${post.id})}">
-                    Post: <span th:text="${post.title}"></span>
+                    Title: <span th:text="${post.title}"></span>
                 </a>
             </h3>
-            <p>Post: <span th:text="${post.body}"></span></p>
+            <p>Body: <span th:text="${post.body}"></span></p>
             <hr />
         </div>
     </main>
