@@ -61,9 +61,11 @@ public class PostController {
 
     @PostMapping("/posts/edit/{id}")
     public String editPost(@PathVariable long id, @RequestParam("title") String title, @RequestParam("body") String body) {
-        Post post = new Post(id, title, body);
+        Post post = postDao.findOne(id);
+        post.setTitle(title);
+        post.setBody(body);
         postDao.save(post);
-        return "redirect:/posts";
+        return "redirect:/posts/" + id;
     }
 
     @GetMapping("posts/delete/{id}")

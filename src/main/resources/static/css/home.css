@@ -1,13 +1,13 @@
-*{
+* {
     box-sizing: border-box;
     /*border: 1px solid red;*/
 }
-body{
+body {
     margin: 0;
     padding: 0;
     font-family: 'Comfortaa', cursive;
 }
-.navbar{
+.navbar {
     background-color: #222;
     position: fixed;
     top: 0;
@@ -19,39 +19,39 @@ body{
     font-size: 1.5em;
     font-weight: 700;
 }
-.nav-logo{
+.nav-logo {
     padding-left: 15px;
 }
-.nav-items{
+.nav-items {
     display: flex;
     margin-left: auto;
 }
-.nav-link{
+.nav-link {
     padding-right: 15px;
 }
-.nav-link-toggle{
+.nav-link-toggle {
     display: none;
 }
-.nav-items a{
+.nav-items a {
     color: #FFF;
     text-decoration: none;
 }
-.nav-items a.active{
+.nav-items a.active {
     color: #e2472f;
 }
-.navbar.scrolled{
+.navbar.scrolled {
     background-color: #ddd;
     box-shadow: 0 2px 6px -4px black;
     transition: background-color 200ms linear;
     color: #000;
 }
-.nav-items a.scrolld{
+.nav-items a.scrolld {
     color: #000;
 }
-.nav-items a.active.scroll{
+.nav-items a.active.scroll {
     color: #e2472f;
 }
-section.sec1{
+section.sec1 {
     width: 100%;
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
@@ -61,7 +61,13 @@ section.sec1{
     align-items: center;
     justify-content: center;
 }
-.intro h1{
+.intro {
+    box-shadow: 3px 3px 5px #000;
+    border: 5px solid #fff;
+    border-radius: 5px;
+    padding: 25px 150px;
+}
+.intro h1, .intro h2 {
     font-size: 3em;
     font-weight: 700;
     color: #fff;
@@ -70,10 +76,13 @@ section.sec1{
     padding: 0;
     margin: 5px;
 }
-.intro span{
+.intro h2 {
+    font-size: 2em;
+}
+.intro span {
     color: #ff0000;
 }
-.content{
+.content {
     margin-top: 80px;
 }
 .content h3 {
@@ -95,6 +104,7 @@ section.sec1{
 .flex button {
     background-color: Transparent;
     border: 3px solid white;
+    border-radius: 5px;
     margin: .25rem;
     padding: .25rem;
     cursor:pointer;
@@ -105,8 +115,9 @@ section.sec1{
     box-shadow: 3px 3px 5px #000;
 }
 .flex button:hover {
-    /*background-color: Transparent;*/
+    background-color: Transparent;
     border: 3px solid #f00;
+    border-radius: 10px;
     margin: .25rem;
     padding: .25rem;
     cursor:pointer;
@@ -130,24 +141,24 @@ section.sec1{
     /*align-self: center;*/
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 768px) {
     .nav-items,
     .navbar{
         flex-direction: column;
     }
-    .nav-items{
+    .nav-items {
         display: none;
         margin-left: 0;
         padding-left: 15px;
     }
-    .nav-items a:hover{
+    .nav-items a:hover {
         border-left: 3px solid #ff0000;
         padding-left: 5px;
     }
-    .nav-toggle-show{
+    .nav-toggle-show {
         display: flex;
     }
-    .nav-link-toggle{
+    .nav-link-toggle {
         align-self: flex-end;
         display: initial;
         position: absolute;
@@ -155,8 +166,8 @@ section.sec1{
         cursor: pointer;
     }
 }
-@media only screen and (min-width: 768px){
-    .nav-items a:hover{
+@media only screen and (min-width: 768px) {
+    .nav-items a:hover {
         border-bottom: 3px solid #ff0000;
         padding-bottom: 13px;
     }

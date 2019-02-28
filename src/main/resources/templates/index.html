@@ -1,28 +1,183 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-<head th:replace="fragments/header :: header('Home!')">
-</head>
-    <link rel="stylesheet" th:href="@{/css/home.css}" />
+<head th:replace="fragments/header :: header('Home!')"></head>
+<link rel="stylesheet" th:href="@{/css/home.css}" />
+<style>
+    hr {
+        border-color: #222222;
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: 35% 65%;
+        grid-template-rows: auto auto auto auto auto auto;
+        border-radius: 15px;
+        margin: 50px auto;
+        width: 900px;
+        overflow: hidden;
+    }
+    .item-1 {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        background-color: #ddd;
+        padding: 0 15px;
+    }
+    .item-2 {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        background-color: #eee;
+        padding: 0 15px;
+    }
+    .item-3 {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        background-color: #ddd;
+        padding: 0 15px;
+    }
+    .item-4 {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        background-color: #eee;
+        padding: 0 15px;
+    }
+    .item-5 {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        background-color: #ddd;
+        padding: 0 15px;
+    }
+    .item-6 {
+        grid-column: 2/3;
+        grid-row: 3/4;
+        background-color: #eee;
+        padding: 0 15px;
+    }
+    .item-7 {
+        grid-column: 1/2;
+        grid-row: 4/5;
+        background-color: #ddd;
+        padding: 0 15px;
+    }
+    .item-8 {
+        grid-column: 2/3;
+        grid-row: 4/5;
+        background-color: #eee;
+        padding: 0 15px;
+    }
+    .item-9 {
+        grid-column: 1/2;
+        grid-row: 5/6;
+        background-color: #ddd;
+        padding: 0 15px;
+    }
+    .item-10 {
+        grid-column: 2/3;
+        grid-row: 5/6;
+        background-color: #eee;
+        padding: 0 15px;
+    }
+    .item-11 {
+        grid-column: 1/2;
+        grid-row: 6/7;
+        background-color: #ddd;
+        padding: 0 15px;
+    }
+    .item-12 {
+        grid-column: 2/3;
+        grid-row: 6/7;
+        background-color: #eee;
+        padding: 0 15px;
+    }
+</style>
 <body>
 
     <div th:replace="fragments/navbar :: navbar"></div>
 
     <section class="sec1">
         <div class="intro">
-            <h1>Hello, I'm <span>Ron Soeum</span>.</h1>
-            <h1>I'm a software developer.</h1>
+            <h1><span>Ron Soeum</span></h1>
+            <h2>Software Developer</h2>
             <div class="flex">
                 <button type="button" class="">Portfolio <i class="fas fa-laptop-code"></i></button>
-                <button type="button" class="">About Me <i class="fas fa-user ml-1"></i></button>
+                <button type="button" class="">Resume <i class="fas fa-user ml-1"></i></button>
             </div>
         </div>
     </section>
 
-    <section class="content">
-        <h3>About Me</h3>
-        <p>One of the most satisfying aspects of programming is creating something out of nothing that is useful to people, especially if it improves their lives in some way. I love the challenge of problem-solving, there is a sense of fulfillment after finding a creative solution. The ever-evolving nature of web development keeps me engaged with new technologies, and there is no limit to what I can learn to improve my craft.</p>
+    <section class="grid-container">
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ea in nihil non praesentium recusandae voluptatem. Asperiores, deleniti dolore eum labore magni, odit, praesentium quas quasi reprehenderit sed sequi voluptas?</p>
+        <div class="item-1">
+            <h3 style="margin-bottom: 5px; padding-bottom: 0;">INFO</h3>
+            <hr style="margin-top: 0;padding: 0;" />
+        </div>
+        <div class="item-2">
+            <h3 style="margin-bottom: 5px; padding-bottom: 0;">ABOUT ME</h3>
+            <hr style="margin-top: 0;padding: 0;" />
+        </div>
+        <div class="item-3">
+            <p><i class="fas fa-map-marker-alt"></i> San Antonio, TX</p>
+            <p><i class="fas fa-phone-square"></i> (210) 412-4670</p>
+            <p><i class="fas fa-envelope-square"></i> RonSoeum@gmail.com</p>
+            <p><i class="fab fa-linkedin"></i> linkedin.com/in/ron-soeum</p>
+            <p><i class="fab fa-git-square"></i> github.com/RonSoeum</p>
+        </div>
+        <div class="item-4">
+            <p>One of the most satisfying aspects of programming is creating something out of nothing that is useful to people, especially if it improves their lives in some way. I love the challenge of problem-solving, there is a sense of fulfillment after finding a creative solution. The ever-evolving nature of web development keeps me engaged with new technologies, and there is no limit to what I can learn to improve my craft.</p>
+        </div>
+        <div class="item-5">
+            <h3 style="margin-bottom: 5px; padding-bottom: 0;">EDUCATION</h3>
+            <hr style="margin-top: 0;padding: 0;" />
+        </div>
+        <div class="item-6">
+            <h3 style="margin-bottom: 5px; padding-bottom: 0;">DEVELOPMENT PROJECTS</h3>
+            <hr style="margin-top: 0;padding: 0;" />
+        </div>
+        <div class="item-7">
+            <p>Certificate in
+                <br />Computer Software Engineering
+                <br />&#8211;&#8211; Java Full Stack
+                <br /><span>Codeup</span>
+                <br />2018 &#8211; 2019</p>
+            <p>Associate in Health Sciences
+                <br /><span>Kaplan University</span>
+                <br />2014 &#8211; 2016</p>
+        </div>
+        <div class="item-8">
+            <p><span>Classified Adlister &#8211;</span> Feb 2019
+                <br />A full-stack web application that allow users to post classified advertisements that are grouped into categories similar to craigslist.</p>
+            <p><span>Chase &#38; Ron's Movies &#8211;</span> Jan 2019
+                <br />A single page web application utilizing AJAX request that allow users to add, edit, and delete movies, as well as rate them.</p>
+            <p><span>Weather &#38; Atmosphere &#8211;</span> Dec 2018
+                <br />A 3-day weather forecast that uses a combination of Open Weather Map and Google Maps API.</p>
+        </div>
+        <div class="item-9">
+            <h3 style="margin-bottom: 5px; padding-bottom: 0;">SKILLS</h3>
+            <hr style="margin-top: 0;padding: 0;" />
+        </div>
+        <div class="item-10">
+            <h3 style="margin-bottom: 5px; padding-bottom: 0;">EXPERIENCE</h3>
+            <hr style="margin-top: 0;padding: 0;" />
+        </div>
+        <div class="item-11">
+            <p>HTML &#8211;&#8211; CSS &#8211;&#8211; Bootstrap &#8211;&#8211; JavaScript &#8211;&#8211; jQuery &#8211;&#8211; Java &#8211;&#8211; MySQL &#8211;&#8211; Spring Boot</p>
+            <p>Command Line &#8211;&#8211; Git/GitHub &#8211;&#8211; Pair Programming</p>
+            <p>EMT-B Certificate (expired)
+                <br />BLS Certificate (expired)</p>
+            <h3 style="margin-bottom: 5px; margin-top: 35px; padding-bottom: 0;">OTHER</h3>
+            <hr style="margin-top: 0;padding: 0;" />
+            <p>Secret Security Clearance (active)</p>
+        </div>
+        <div class="item-12">
+            <p><span>Refrigeration Technician Intern</span> <span>Aug 2018 &#8211; Aug 2019</span>
+                <br /><span>HEB, Inc.</span>
+                <br />Operated and maintained the ammonia refrigeration systems for several manufacturing plants and warehouses on multiple HEB campuses.</p>
+            <p><span>Combat Medic</span> <span>Mar 2013 &#8211; Mar 2017</span>
+                <br /><span>US Army</span>
+                <br />Primarily responsible for providing emergency medical treatment at point of wounding on the battlefield, limited primary care, and health protection and evacuation from a point of injury or illness.</p>
+            <p><span>Telecommunications Technician</span> <span>Mar 2006 &#8211; Apr 2012</span>
+                <br /><span>Amtec, LLC</span>
+                <br />Installed residential and commercial internet, phone, and cable TV for Comcast customers.</p>
+        </div>
+
 
     </section>
 
