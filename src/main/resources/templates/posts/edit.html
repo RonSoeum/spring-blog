@@ -70,9 +70,9 @@
 
 <div th:replace="fragments/navbar :: navbar"></div>
 
-<h1>WELCOME TO THE EDIT POST!</h1>
 
 <main>
+    <h1>WELCOME TO THE EDIT POST!</h1>
     <div class="container">
         <form th:method="post" th:action="@{/posts/edit/{id}(id=${post.id})}" th:object="${post}">
             <div class="row">
