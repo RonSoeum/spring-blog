@@ -12,8 +12,6 @@ $(document).ready(() => {
         $navItemsActive.toggleClass('scroll', $(this).scrollTop() > $sec1.height());
     });
 
-
-
     $('.nav-link-toggle').click(() => {
         $('.nav-items').toggleClass('nav-toggle-show');
     });
