@@ -7,7 +7,9 @@ $(document).ready(() => {
     });
 
     $(function() {
-        $('.nav-items a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+        if (location.pathname.split("/")[1] != "") {
+            $('.nav-items a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+        }
     });
 
 });// Ready
