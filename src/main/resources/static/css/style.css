@@ -8,11 +8,12 @@ html {
 }
 body {
     margin: 0;
-    padding-bottom: 50px;
+    /*padding-bottom: 50px;*/
+    padding: 0;
     font-family: 'Comfortaa', cursive;
 }
 .navbar {
-    background-color: #222;
+    background-color: #080808;
     position: fixed;
     top: 0;
     left: 0;
@@ -26,6 +27,9 @@ body {
 .nav-logo {
     padding-left: 15px;
 }
+.nav-link-toggle {
+    display: none;
+}
 .nav-items {
     display: flex;
     margin-left: auto;
@@ -33,35 +37,33 @@ body {
 .nav-link {
     padding-right: 15px;
 }
-.nav-link-toggle {
-    display: none;
-}
-.nav-items a {
+.nav-logo a, .nav-items a {
     color: #FFF;
     text-decoration: none;
 }
-.nav-items a.active {
-    color: #e2472f;
+.nav-logo a.active, .nav-items a.active {
+    color: #f00;
 }
 .navbar.scrolled {
-    background-color: #ddd;
-    box-shadow: 0 2px 6px -4px black;
+    background-color: #fff;
+    box-shadow: 0 2px 6px -4px #080808;
     transition: background-color 200ms linear;
-    color: #000;
+    color: #080808;
 }
-.nav-items a.scrolld {
-    color: #000;
+.nav-logo a.scrolld, .nav-items a.scrolld {
+    color: #080808;
 }
-.nav-items a.active.scroll {
-    color: #e2472f;
+.nav-logo a.active.scroll, .nav-items a.active.scroll {
+    color: #f00;
 }
 main {
     margin: 100px auto 50px auto;
-    width: 1024px;
+    padding-bottom: 50px;
+    width: 80%;
 }
 .footer {
-    background-color: #222;
-    color: white;
+    background-color: #080808;
+    color: #fff;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -70,4 +72,36 @@ main {
     overflow: hidden;
     display: flex;
     justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-items,
+    .navbar{
+        flex-direction: column;
+    }
+    .nav-items {
+        display: none;
+        margin-left: 0;
+        padding-left: 15px;
+    }
+    .nav-logo a:hover, .nav-items a:hover {
+        border-left: 3px solid #ff0000;
+        padding-left: 5px;
+    }
+    .nav-toggle-show {
+        display: flex;
+    }
+    .nav-link-toggle {
+        align-self: flex-end;
+        display: initial;
+        position: absolute;
+        padding-right: 15px;
+        cursor: pointer;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .nav-logo a:hover, .nav-items a:hover {
+        border-bottom: 3px solid #ff0000;
+        padding-bottom: 13px;
+    }
 }

@@ -3,14 +3,13 @@
 <body>
     <th:block th:fragment="navbar">
         <div class="navbar">
-            <div class="nav-logo">RON SOEUM</div>
+            <div class="nav-logo">
+                <a th:href="@{/}">RON SOEUM</a>
+            </div>
             <div class="nav-link-toggle">
                 <i class="fas fa-bars"></i>
             </div>
             <nav class="nav-items">
-                <div class="nav-link">
-                    <a th:href="@{/}">Home</a>
-                </div>
                 <div class="nav-link">
                     <a th:href="@{/roll-dice}">Roll Dice</a>
                 </div>
@@ -21,7 +20,7 @@
                     <a th:href="@{/posts/create}">Create Post</a>
                 </div>
                 <div class="nav-link">
-                    <a class="active" href="#">LOG IN</a>
+                    <a th:href="@{/}">Log In</a>
                 </div>
             </nav>
         </div>

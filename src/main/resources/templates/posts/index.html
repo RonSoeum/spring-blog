@@ -2,24 +2,19 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head th:replace="fragments/header :: header('Home!')"></head>
 <body>
-
     <div th:replace="fragments/navbar :: navbar"></div>
-
 
     <main>
         <h1>WELCOME TO THE POSTS INDEX!</h1>
         <div th:each="post : ${posts}">
             <h3>
-                <a th:href="@{/posts/{id}(id=${post.id})}">
-                    Title: <span th:text="${post.title}"></span>
-                </a>
+                <a th:href="@{/posts/{id}(id=${post.id})}"><span th:text="${post.title}"></span></a>
             </h3>
-            <p>Body: <span th:text="${post.body}"></span></p>
+            <p><span th:text="${post.body}"></span></p>
             <hr />
         </div>
     </main>
 
     <div th:replace="fragments/footer :: footer"></div>
-
 </body>
 </html>
