@@ -6,8 +6,8 @@
     <div th:replace="fragments/navbar :: navbar"></div>
 
     <main>
-        <h1>WELCOME TO THE EDIT POST!</h1>
-        <div class="container">
+        <h1>EDIT A POST!</h1>
+        <div class="form-container">
             <form th:method="post" th:action="@{/posts/edit/{id}(id=${post.id})}" th:object="${post}">
                 <div class="row">
                     <div class="col-15">
@@ -33,5 +33,6 @@
     </main>
 
     <div th:replace="fragments/footer :: footer"></div>
+    <div th:replace="fragments/scripts :: scripts"></div>
 </body>
 </html>

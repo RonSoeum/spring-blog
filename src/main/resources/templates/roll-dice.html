@@ -1,39 +1,91 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="fragments/header :: header('Roll Dice!')"></head>
-<body>
+<style>
+    ul {
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+        padding: 0;
+    }
+    li {
+        display: block;
+    }
+    i {
+        color: #f00;
+        font-size: 4em;
 
+    }
+    .d-inline-b {
+        display: inline-block;
+    }
+    .text-center {
+        text-align: center;
+    }
+    .small-div {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+    }
+    .red {
+        color: #f00;
+    }
+    .margin-top {
+        margin-top: 3em;
+    }
+    .box {
+        border: 3px solid #f00;
+    }
+    .box-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+<body>
     <div th:replace="fragments/navbar :: navbar"></div>
 
     <main>
+        <h1 class="text-center">TEST YOUR LUCK!</h1>
         <ul>
             <li>
-                <a th:href="@{/roll-dice/1}">Guess 1 for dice roll</a>
+                <a th:href="@{/roll-dice/1}"><i class="fas fa-dice-one"></i></a>
             </li>
             <li>
-                <a th:href="@{/roll-dice/2}">Guess 2 for dice roll</a>
+                <a th:href="@{/roll-dice/2}"><i class="fas fa-dice-two"></i></a>
             </li>
             <li>
-                <a th:href="@{/roll-dice/3}">Guess 3 for dice roll</a>
+                <a th:href="@{/roll-dice/3}"><i class="fas fa-dice-three"></i></a>
             </li>
             <li>
-                <a th:href="@{/roll-dice/4}">Guess 4 for dice roll</a>
+                <a th:href="@{/roll-dice/4}"><i class="fas fa-dice-four"></i></a>
             </li>
             <li>
-                <a th:href="@{/roll-dice/5}">Guess 5 for dice roll</a>
+                <a th:href="@{/roll-dice/5}"><i class="fas fa-dice-five"></i></a>
             </li>
             <li>
-                <a th:href="@{/roll-dice/6}">Guess 6 for dice roll</a>
+                <a th:href="@{/roll-dice/6}"><i class="fas fa-dice-six"></i></a>
             </li>
         </ul>
 
-        <h1>Your Guess: <span th:text="${guess}"></span></h1>
-        <h1>Dice Roll: <span th:text="${diceRoll}"></span></h1>
-        <h1>Result: <span th:text="${result}"></span></h1>
+        <div class="small-div">
+            <h1 class="d-inline-b">Your Guess: <span th:text="${guess}"></span></h1>
+            <h1 class="d-inline-b">Dice Roll: <span th:text="${diceRoll}"></span></h1>
+        </div>
+        <div th:switch="${result}">
+            <div class="box" th:case="'Lucky Guess!'">
+                <p class="box-item"><i class="fas fa-trophy"></i></p>
+                <h1 class="box-item red"><span th:text="${result}"></span></h1>
+            </div>
+            <div class="box" th:case="'You are wrong.'">
+                <p class="box-item"><i class="fas fa-poop"></i></p>
+                <h1 class="box-item red"><span th:text="${result}"></span></h1>
+            </div>
+        </div>
     </main>
 
     <div th:replace="fragments/footer :: footer"></div>
     <div th:replace="fragments/scripts :: scripts"></div>
-
 </body>
 </html>

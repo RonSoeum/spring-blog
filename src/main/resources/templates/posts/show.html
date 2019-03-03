@@ -5,7 +5,7 @@
     <div th:replace="fragments/navbar :: navbar"></div>
 
     <main>
-        <h1>WELCOME TO THE POSTS SHOW!</h1>
+        <h1>BLOG!</h1>
         <h2>Title: <span th:text="${post.title}"></span></h2>
         <p>Body: <span th:text="${post.body}"></span></p>
         <p>Id: <span th:text="${post.id}"></span></p>
@@ -14,5 +14,6 @@
     </main>
 
     <div th:replace="fragments/footer :: footer"></div>
+    <div th:replace="fragments/scripts :: scripts"></div>
 </body>
 </html>

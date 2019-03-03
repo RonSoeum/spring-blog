@@ -22,7 +22,7 @@ public class RollDiceController {
 
         String result;
         if (diceRoll == guess) {
-            result = "You guessed the right number!";
+            result = "Lucky Guess!";
         } else {
             result = "You are wrong.";
         }

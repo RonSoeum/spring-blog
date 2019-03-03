@@ -6,7 +6,7 @@
     <div th:replace="fragments/navbar :: navbar"></div>
 
     <main>
-        <h1>WELCOME TO THE CREATE POST!</h1>
+        <h1>CREATE A POST!</h1>
         <div class="form-container">
             <form th:method="post" th:action="@{/posts/create}" th:object="${post}">
                 <div class="row">
@@ -33,5 +33,6 @@
     </main>
 
     <div th:replace="fragments/footer :: footer"></div>
+    <div th:replace="fragments/scripts :: scripts"></div>
 </body>
 </html>
