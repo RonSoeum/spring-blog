@@ -2,45 +2,51 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="fragments/header :: header('Roll Dice!')"></head>
 <style>
+    main {
+        width: 60%;
+    }
     ul {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         list-style: none;
         padding: 0;
     }
     li {
         display: block;
     }
-    i {
+    li i, p i {
         color: #f00;
         font-size: 4em;
 
     }
-    .d-inline-b {
-        display: inline-block;
-    }
     .text-center {
         text-align: center;
     }
-    .small-div {
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        width: 80%;
-    }
     .red {
-        color: #f00;
+        color: darkred;
     }
-    .margin-top {
-        margin-top: 3em;
+    .green {
+        color: darkgreen;
     }
-    .box {
-        border: 3px solid #f00;
+    .gold {
+        color: gold;
+    }
+    .brown {
+        color: saddlebrown;
     }
     .box-item {
+        border: 3px solid #ddd;
+        background-color: #eee;
+        border-radius: 5px;
+        padding: 1em;
+        width: 300px;
+    }
+    .box {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
+        margin: 50px auto 0 auto;
+        /*width: 60%*/
     }
 </style>
 <body>
@@ -69,18 +75,18 @@
             </li>
         </ul>
 
-        <div class="small-div">
-            <h1 class="d-inline-b">Your Guess: <span th:text="${guess}"></span></h1>
-            <h1 class="d-inline-b">Dice Roll: <span th:text="${diceRoll}"></span></h1>
-        </div>
-        <div th:switch="${result}">
-            <div class="box" th:case="'Lucky Guess!'">
-                <p class="box-item"><i class="fas fa-trophy"></i></p>
-                <h1 class="box-item red"><span th:text="${result}"></span></h1>
+        <div class="box" th:switch="${result}">
+            <div class="">
+                <h1 class="">Your Guess: <span th:text="${guess}"></span></h1>
+                <h1 class="">Dice Roll: <span th:text="${diceRoll}"></span></h1>
             </div>
-            <div class="box" th:case="'You are wrong.'">
-                <p class="box-item"><i class="fas fa-poop"></i></p>
-                <h1 class="box-item red"><span th:text="${result}"></span></h1>
+            <div class="box-item" th:case="'Lucky Guess!'">
+                <p class="text-center"><i class="fas fa-trophy gold"></i></p>
+                <h1 class="text-center green"><span th:text="${result}"></span></h1>
+            </div>
+            <div class="box-item" th:case="'You are wrong.'">
+                <p class="text-center"><i class="fas fa-poop brown"></i></p>
+                <h1 class="text-center red"><span th:text="${result}"></span></h1>
             </div>
         </div>
     </main>

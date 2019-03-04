@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="fragments/header :: header('Post Index!')"></head>
+<style>
+    .post {
+        width: 67.015%;
+        float: left;
+        margin-bottom: 35px;
+        padding: 3.994%;
+    }
+</style>
 <body>
     <div th:replace="fragments/navbar :: navbar"></div>
 
     <main>
         <h1>BLOG!</h1>
-        <div th:each="post : ${posts}">
+        <div class="post" th:each="post : ${posts}">
             <h3>
                 <a th:href="@{/posts/{id}(id=${post.id})}"><span th:text="${post.title}"></span></a>
             </h3>
