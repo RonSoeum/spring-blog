@@ -1,6 +1,8 @@
 package com.codeup.blog.Controller;
 import com.codeup.blog.Post.Post;
 import com.codeup.blog.Post.PostRepository;
+import com.codeup.blog.Services.EmailService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -8,11 +10,20 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class PostController {
 
-    private final PostRepository postDao;
+    @Autowired
+    private EmailService emailService;
 
-    public PostController(PostRepository postDao) {
-        this.postDao = postDao;
-    }
+//    public PostController(EmailService emailService) {
+//        this.emailService = emailService;
+//    }
+
+    @Autowired
+    private PostRepository postDao;
+
+//    public PostController(PostRepository postDao) {
+//        this.postDao = postDao;
+//    }
+
 
     @GetMapping("/posts")
     public String getAllPosts(Model model) {
@@ -44,6 +55,7 @@ public class PostController {
     @PostMapping("/posts/create")
     public String createPost(@ModelAttribute Post post) {
         postDao.save(post);
+        emailService.prepareAndSend(post, post.getTitle(), post.getBody());
         return "redirect:/posts";
     }
 
