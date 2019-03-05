@@ -8,19 +8,27 @@
         margin-bottom: 35px;
         padding: 3.994%;
     }
+    h3 a {
+        text-decoration: none;
+        color: #f00;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
 </style>
 <body>
     <div th:replace="fragments/navbar :: navbar"></div>
 
     <main>
         <h1>BLOG!</h1>
-        <div class="post" th:each="post : ${posts}">
-            <h3>
-                <a th:href="@{/posts/{id}(id=${post.id})}"><span th:text="${post.title}"></span></a>
-            </h3>
+        <article class="post" th:each="post : ${posts}">
+            <img th:src="@{https://picsum.photos/500/300/?random}" alt="random" />
+            <p>on March 3, 2019 | <span>by Ron Soeum</span></p>
+            <h3><a th:href="@{/posts/{id}(id=${post.id})}"><span th:text="${post.title}"></span></a></h3>
             <p><span th:text="${post.body}"></span></p>
             <hr />
-        </div>
+        </article>
     </main>
 
     <div th:replace="fragments/footer :: footer"></div>

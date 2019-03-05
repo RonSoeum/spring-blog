@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="fragments/header :: header('Post!')"></head>
+<style>
+    article {
+
+    }
+</style>
 <body>
     <div th:replace="fragments/navbar :: navbar"></div>
 
     <main>
         <h1>BLOG!</h1>
-        <h2>Title: <span th:text="${post.title}"></span></h2>
-        <p>Body: <span th:text="${post.body}"></span></p>
-        <p>Id: <span th:text="${post.id}"></span></p>
-        <a th:href="@{/posts/edit/{id}(id=${post.id})}"><button>Edit</button></a>
-        <a th:href="@{/posts/delete/{id}(id=${post.id})}"><button>Delete</button></a>
+        <article>
+            <p>on March 3, 2019 | <span>by Ron Soeum</span></p>
+            <h2>Title: <span th:text="${post.title}"></span></h2>
+            <p>Body: <span th:text="${post.body}"></span></p>
+            <p>Id: <span th:text="${post.id}"></span></p>
+            <a th:href="@{/posts/edit/{id}(id=${post.id})}"><button>Edit</button></a>
+            <a th:href="@{/posts/delete/{id}(id=${post.id})}"><button>Delete</button></a>
+        </article>
     </main>
 
     <div th:replace="fragments/footer :: footer"></div>

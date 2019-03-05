@@ -2,6 +2,8 @@ package com.codeup.blog.Controller;
 import com.codeup.blog.Post.Post;
 import com.codeup.blog.Post.PostRepository;
 import com.codeup.blog.Services.EmailService;
+import com.codeup.blog.User.User;
+import com.codeup.blog.User.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,17 +15,11 @@ public class PostController {
     @Autowired
     private EmailService emailService;
 
-//    public PostController(EmailService emailService) {
-//        this.emailService = emailService;
-//    }
-
     @Autowired
     private PostRepository postDao;
 
-//    public PostController(PostRepository postDao) {
-//        this.postDao = postDao;
-//    }
-
+    @Autowired
+    private UserRepository userDao;
 
     @GetMapping("/posts")
     public String getAllPosts(Model model) {
@@ -54,7 +50,13 @@ public class PostController {
 
     @PostMapping("/posts/create")
     public String createPost(@ModelAttribute Post post) {
+        User user = userDao.findOne(2L); // just use the first user in the db
+//        Post newPost = new Post();
+//        post.setTitle("Bike for sale");
+//        post.setBody("7 speed bike in good condition.");
+        post.setUser(user);
         postDao.save(post);
+
         emailService.prepareAndSend(post, post.getTitle(), post.getBody());
         return "redirect:/posts";
     }
