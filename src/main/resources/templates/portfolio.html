@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header('Roll Dice!')"></head>
+<style>
+    header {
+        width: 100%;
+        height: 200px;
+        text-align: center;
+    }
+    article {
+        display: flex;
+    }
+    .image {
+        flex: 2;
+        margin: 10px;
+    }
+    img {
+        box-shadow: 5px 10px 8px #888888;
+        max-width: 100%;
+        vertical-align: top;
+    }
+    .project {
+        background: #aaa;
+        box-shadow: 5px 10px 8px #888888;
+        color: white;
+        flex: 1;
+        margin: 10px;
+    }
+    .project p {
+        padding: 0 10px;
+        text-align: justify;
+    }
+    main a {
+        margin: 0;
+        padding: 0;
+    }
+</style>
+<body>
+    <div th:replace="fragments/navbar :: navbar"></div>
+
+    <main>
+
+        <article>
+            <div class="image">
+                <a href="https://chase-and-ron-movies-application.glitch.me/" target="_blank" rel="noopener noreferrer"><img src="/images/chase-ron-movies.png" alt="movie-app" /></a>
+            </div>
+            <div class="project"><p>Movie App</p></div>
+        </article>
+        <article>
+            <div class="image">
+                <a href="https://weather-atmosphere.glitch.me" target="_blank" rel="noopener noreferrer"><img src="/images/weather-atmosphere.png" alt="weather-atmosphere" /></a>
+            </div>
+            <div class="project"><p>Weather App</p></div>
+        </article>
+
+    </main>
+
+    <div th:replace="fragments/footer :: footer"></div>
+    <div th:replace="fragments/scripts :: scripts"></div>
+</body>
+</html>

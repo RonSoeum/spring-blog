@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head th:replace="fragments/header :: header('Post!')"></head>
 <style>
     article {
@@ -16,8 +16,8 @@
             <h2>Title: <span th:text="${post.title}"></span></h2>
             <p>Body: <span th:text="${post.body}"></span></p>
             <p>Id: <span th:text="${post.id}"></span></p>
-            <a th:href="@{/posts/edit/{id}(id=${post.id})}"><button>Edit</button></a>
-            <a th:href="@{/posts/delete/{id}(id=${post.id})}"><button>Delete</button></a>
+            <a sec:authorize="isAuthenticated()" th:href="@{/posts/edit/{id}(id=${post.id})}"><button>Edit</button></a>
+            <a sec:authorize="isAuthenticated()" th:href="@{/posts/delete/{id}(id=${post.id})}"><button>Delete</button></a>
         </article>
     </main>
 

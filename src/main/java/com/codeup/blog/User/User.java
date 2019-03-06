@@ -7,26 +7,33 @@ import java.util.List;
 @Table(name="users")
 public class User {
 
+    public User(User copy) {
+        id = copy.id;
+        email = copy.email;
+        username = copy.username;
+        password = copy.password;
+    }
+
     @Id @GeneratedValue
     private long id;
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String username;
 
     @Column(nullable = false)
     private String password;
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String email;
 
-    @Column
-    private String first_name;
+    @Column(name="first_name")
+    private String firstName;
 
-    @Column
-    private String last_name;
+    @Column(name="last_name")
+    private String lastName;
 
-    @Column(length = 14)
-    private String phone_number;
+    @Column(name="phone_number", length = 14)
+    private String phoneNumber;
 
     @Column
     private String image;
@@ -34,20 +41,34 @@ public class User {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     private List<Post> posts;
 
-    public User(long id, String username, String password, String email, String first_name, String last_name, String phone_number) {
+    public User(long id, String username, String email, String password, String firstName, String lastName, String phoneNumber, String image, List<Post> posts) {
         this.id = id;
         this.username = username;
-        this.password = password;
         this.email = email;
-        this.first_name = first_name;
-        this.last_name = last_name;
-        this.phone_number = phone_number;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phoneNumber = phoneNumber;
+        this.image = image;
+        this.posts = posts;
     }
 
-    public User(String username, String password, String email) {
+    public User(String username, String password, String email, String firstName, String lastName, String phoneNumber, String image, List<Post> posts) {
         this.username = username;
         this.password = password;
         this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phoneNumber = phoneNumber;
+        this.image = image;
+        this.posts = posts;
+    }
+
+    public User(long id, String username, String email, String password) {
+        this.id = id;
+        this.username = username;
+        this.email = email;
+        this.password = password;
     }
 
     public User() {
@@ -85,28 +106,28 @@ public class User {
         this.email = email;
     }
 
-    public String getFirst_name() {
-        return first_name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFirst_name(String first_name) {
-        this.first_name = first_name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getLast_name() {
-        return last_name;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    public String getPhone_number() {
-        return phone_number;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setPhone_number(String phone_number) {
-        this.phone_number = phone_number;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getImage() {
@@ -117,4 +138,11 @@ public class User {
         this.image = image;
     }
 
+    public List<Post> getPosts() {
+        return posts;
+    }
+
+    public void setPosts(List<Post> posts) {
+        this.posts = posts;
+    }
 }// class

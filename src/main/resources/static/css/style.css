@@ -7,20 +7,21 @@ html {
     min-height: 100%;
 }
 body {
+    background-color: #eee;
     margin: 0;
-    /*padding-bottom: 50px;*/
     padding: 0;
     font-family: 'Comfortaa', cursive;
 }
 .navbar {
-    background-color: #080808;
+    background-color: transparent;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
     position: fixed;
     top: 0;
     left: 0;
     display: flex;
     padding: 16px;
     width: 100%;
-    color: #fff;
+    color: #080808;
     font-size: 1.5em;
     font-weight: 700;
 }
@@ -35,10 +36,10 @@ body {
     margin-left: auto;
 }
 .nav-link {
-    padding-right: 15px;
+    padding-right: 20px;
 }
 .nav-logo a, .nav-items a {
-    color: #FFF;
+    color: #080808;
     text-decoration: none;
 }
 .nav-logo a.active, .nav-items a.active {
@@ -56,14 +57,17 @@ body {
 .nav-logo a.active.scroll, .nav-items a.active.scroll {
     color: #f00;
 }
+a:hover {
+    cursor:pointer;
+}
 main {
     margin: 100px auto 50px auto;
     padding-bottom: 50px;
     width: 80%;
 }
 .footer {
-    background-color: #080808;
-    color: #fff;
+    background-color: #fff;
+    color: #080808;
     position: absolute;
     left: 0;
     bottom: 0;

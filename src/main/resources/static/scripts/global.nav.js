@@ -18,4 +18,8 @@ $(document).ready(() => {
         }
     });
 
+    $('a.logout').click(() => {
+        document.forms["logout"].submit();
+    });
+
 });// Ready
