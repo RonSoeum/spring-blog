@@ -179,3 +179,58 @@ a.anchor {
     background-color: #080808;
     color: #fff;
 }
+@media only screen and (max-width: 374px) {
+    .item-1 p span.phone-number {
+        display: none;
+    }
+}
+@media only screen and (min-width: 375px) {
+    .item-1 p span.phone {
+        display: none;
+    }
+}
+@media only screen and (max-width: 570px) {
+    .item-1 .show-big {
+        display: none;
+    }
+    .justify {
+        text-align: left;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .intro {
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        padding: 0;
+        font-size: .9em;
+    }
+    .flex button {
+        font-size: large;
+    }
+}
+@media only screen and (min-width: 571px) {
+    .item-1 .show-small {
+        display: none;
+    }
+}
+@media all and (min-width: 400px) and (max-width: 750px) {
+    .intro {
+        padding: 25px 25px;
+    }
+}
+@media only screen and (max-width: 779px) {
+    .grid-container, footer {
+        font-size: .7em;
+    }
+}
+@media only screen and (min-width: 780px) {
+    .item-1 .show-small {
+        display: none;
+    }
+}
+@media only screen and (max-width: 973px) {
+    .grid-container {
+        width: 100%;
+    }
+}
