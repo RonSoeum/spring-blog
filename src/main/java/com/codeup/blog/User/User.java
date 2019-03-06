@@ -1,6 +1,7 @@
 package com.codeup.blog.User;
 import com.codeup.blog.Post.Post;
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -39,7 +40,7 @@ public class User {
     private String image;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
-    private List<Post> posts;
+    private List<Post> posts =new ArrayList<>();
 
     public User(long id, String username, String email, String password, String firstName, String lastName, String phoneNumber, String image, List<Post> posts) {
         this.id = id;
@@ -145,4 +146,5 @@ public class User {
     public void setPosts(List<Post> posts) {
         this.posts = posts;
     }
+
 }// class

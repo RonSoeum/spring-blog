@@ -50,7 +50,9 @@ public class PostController {
 
     @PostMapping("/posts/create")
     public String createPost(@ModelAttribute Post post) {
-        User user = userDao.findOne(2L); // just use the first user in the db
+        User user = userDao.findOne(1L); // just use the first user in the db
+        System.out.println("asd f asfd asdf  asf afds " + post.getUser());
+        System.out.println("adsgdgfsdgsdfgsfdg" + user);
 //        Post newPost = new Post();
 //        post.setTitle("Bike for sale");
 //        post.setBody("7 speed bike in good condition.");
@@ -69,6 +71,9 @@ public class PostController {
 
     @PostMapping("/posts/edit/{id}")
     public String editPost(@PathVariable long id, @ModelAttribute Post post) {
+        User user = userDao.findOne(1L);
+        System.out.println(user.getId());
+        post.setUser(user);
         postDao.save(post);
         return "redirect:/posts/" + id;
     }
