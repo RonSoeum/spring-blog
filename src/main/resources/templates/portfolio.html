@@ -2,57 +2,135 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="fragments/header :: header('Roll Dice!')"></head>
 <style>
-    header {
-        width: 100%;
-        height: 200px;
-        text-align: center;
-    }
-    article {
+    .project-big {
         display: flex;
     }
-    .image {
+    .project-big, .project-small {
+        box-shadow: 5px 10px 8px #888888;
+        margin: 50px 0 50px 0;
+    }
+    .image-big {
         flex: 2;
-        margin: 10px;
     }
     img {
-        box-shadow: 5px 10px 8px #888888;
         max-width: 100%;
         vertical-align: top;
     }
-    .project {
-        background: #aaa;
-        box-shadow: 5px 10px 8px #888888;
-        color: white;
+    .text-big {
         flex: 1;
-        margin: 10px;
     }
-    .project p {
-        padding: 0 10px;
+    .text-big, .text-small {
+        background: #ddd;
+        color: #080808;
+    }
+    .text-big a h3, .text-small a h3 {
+        text-align: center;
+        color: #ff0000;
+    }
+    .text-small a h3 {
+        margin: 0;
+        padding-top: 20px;
+    }
+    .text-big a, .text-small a {
+        text-decoration: none;
+    }
+    .text-big p, .text-small p {
         text-align: justify;
+        padding: 10px;
+    }
+    .text-small p {
+        padding:  10px 10px 20px 10px;
     }
     main a {
         margin: 0;
         padding: 0;
+    }
+    @media only screen and (max-width: 425px) {
+        main {
+            width: 95%;
+        }
+        footer {
+            font-size: .7em;
+        }
+    }
+    @media only screen and (max-width: 1023px) {
+        .show-big {
+            display: none;
+        }
+    }
+    @media only screen and (min-width: 1024px) {
+        .show-small {
+            display: none;
+        }
     }
 </style>
 <body>
     <div th:replace="fragments/navbar :: navbar"></div>
 
     <main>
+        <article class="show-big">
+            <section class="project-big">
+                <div class="image-big">
+                    <img src="/images/classified-adlister.png" alt="classified-adlister" />
+                </div>
+                <div class="text-big">
+                    <a href="#" target="" rel="noopener noreferrer"><h3>Classified Adlister</h3></a>
+                    <p>A full-stack web application that allow users to post classified advertisements that are grouped into categories similar to craigslist.</p>
+                </div>
+            </section>
 
-        <article>
-            <div class="image">
-                <a href="https://chase-and-ron-movies-application.glitch.me/" target="_blank" rel="noopener noreferrer"><img src="/images/chase-ron-movies.png" alt="movie-app" /></a>
-            </div>
-            <div class="project"><p>Movie App</p></div>
-        </article>
-        <article>
-            <div class="image">
-                <a href="https://weather-atmosphere.glitch.me" target="_blank" rel="noopener noreferrer"><img src="/images/weather-atmosphere.png" alt="weather-atmosphere" /></a>
-            </div>
-            <div class="project"><p>Weather App</p></div>
+            <section class="project-big">
+                <div class="image-big">
+                    <img src="/images/chase-ron-movies.png" alt="movie-app" />
+                </div>
+                <div class="text-big">
+                    <a href="https://chase-and-ron-movies-application.glitch.me/" target="_blank" rel="noopener noreferrer"><h3>Chase &#38; Ron's Movies</h3></a>
+                    <p>A single page web application utilizing AJAX request that allow users to add, edit, and delete movies, as well as rate them.</p>
+                </div>
+            </section>
+
+            <section class="project-big">
+                <div class="image-big">
+                    <img src="/images/weather-atmosphere.png" alt="weather-atmosphere" />
+                </div>
+                <div class="text-big">
+                    <a href="https://weather-atmosphere.glitch.me" target="_blank" rel="noopener noreferrer"><h3>Weather &#38; Atmosphere</h3></a>
+                    <p>A 3-day weather forecast that uses a combination of Open Weather Map and Google Maps API.</p>
+                </div>
+            </section>
         </article>
 
+        <article class="show-small">
+            <section class="project-small">
+                <div class="image-small">
+                    <img src="/images/classified-adlister.png" alt="classified-adlister" />
+                </div>
+                <div class="text-small">
+                    <a href="#" target="" rel="noopener noreferrer"><h3>Classified Adlister</h3></a>
+                    <p>A full-stack web application that allow users to post classified advertisements that are grouped into categories similar to craigslist.</p>
+                </div>
+            </section>
+
+            <section class="project-small">
+                <div class="image-small">
+                    <img src="/images/chase-ron-movies.png" alt="movie-app" />
+                </div>
+                <div class="text-small">
+                    <a href="https://chase-and-ron-movies-application.glitch.me/" target="_blank" rel="noopener noreferrer"><h3>Chase &#38; Ron's Movies</h3></a>
+                    <p>A single page web application utilizing AJAX request that allow users to add, edit, and delete movies, as well as rate them.</p>
+                </div>
+            </section>
+
+            <section class="project-small">
+                <div class="image-small">
+                    <img src="/images/weather-atmosphere.png" alt="weather-atmosphere" />
+                </div>
+                <div class="text-small">
+                    <a href="https://weather-atmosphere.glitch.me" target="_blank" rel="noopener noreferrer"><h3>Weather &#38; Atmosphere</h3></a>
+                    <p>A 3-day weather forecast that uses a combination of Open Weather Map and Google Maps API.</p>
+                </div>
+            </section>
+        </article>
     </main>
 
     <div th:replace="fragments/footer :: footer"></div>
