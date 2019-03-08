@@ -2,19 +2,25 @@
 <html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head th:replace="fragments/header :: header('Post!')"></head>
 <style>
-    article {
-
+    img {
+        width: 100%;
+        height: auto;
+    }
+    @media only screen and (min-width: 768px) {
+        main {
+            width: 60%;
+        }
     }
 </style>
 <body>
     <div th:replace="fragments/navbar :: navbar"></div>
 
     <main>
-        <h1>BLOG!</h1>
         <article>
+            <img th:src="@{${post.image}}" alt="lorem ipsum" />
             <p>on March 3, 2019 | <span>by Ron Soeum</span></p>
-            <h2>Title: <span th:text="${post.title}"></span></h2>
-            <p>Body: <span th:text="${post.body}"></span></p>
+            <h2><span th:text="${post.title}"></span></h2>
+            <p><span th:text="${post.body}"></span></p>
             <p>Id: <span th:text="${post.id}"></span></p>
             <a sec:authorize="isAuthenticated()" th:href="@{/posts/edit/{id}(id=${post.id})}"><button>Edit</button></a>
             <a sec:authorize="isAuthenticated()" th:href="@{/posts/delete/{id}(id=${post.id})}"><button>Delete</button></a>

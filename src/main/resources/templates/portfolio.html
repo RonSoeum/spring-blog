@@ -2,6 +2,9 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="fragments/header :: header('Portfolio')"></head>
 <style>
+    main {
+        padding-bottom: 25px;
+    }
     .project-big {
         display: flex;
     }
@@ -47,7 +50,7 @@
     }
     @media only screen and (max-width: 425px) {
         main {
-            width: 90%;
+            width: 80%;
         }
     }
     @media only screen and (max-width: 1023px) {

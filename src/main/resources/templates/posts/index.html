@@ -13,12 +13,17 @@
         width: 100%;
         height: auto;
     }
+    @media only screen and (min-width: 768px) {
+        main {
+            width: 60%;
+        }
+    }
 </style>
 <body>
     <div th:replace="fragments/navbar :: navbar"></div>
 
     <main>
-        <h1>BLOG!</h1>
+        <h3>Blog</h3>
         <article class="post" th:each="post : ${posts}">
             <img th:src="@{${post.image}}" alt="lorem ipsum" />
             <p>on March 3, 2019 | <span>by Ron Soeum</span></p>
