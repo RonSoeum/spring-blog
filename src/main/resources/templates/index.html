@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments/header :: header('Home!')"></head>
+<head th:replace="fragments/header :: header('Welcome')"></head>
 <link rel="stylesheet" th:href="@{/css/home.css}" />
 <body>
     <div th:replace="fragments/navbar :: navbar"></div>
@@ -18,69 +18,71 @@
 
     <a class="anchor"></a>
 
-    <section class="grid-container">
-        <div class="item-1">
-            <h3>INFO</h3>
-            <hr />
-            <p class="show-big"><i class="fas fa-phone-square"></i> <a href="tel:210-412-4670">(210) 412-4670</a>
-                <br /><i class="fas fa-envelope-square"></i> <a href="mailto:RonSoeum@gmail.com">RonSoeum@gmail.com</a>
-                <br /><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/ron-soeum" target="_blank" rel="noopener noreferrer">linkedin.com/in/ron-soeum</a>
-                <br /><i class="fab fa-git-square"></i> <a href="https://github.com/RonSoeum" target="_blank" rel="noopener noreferrer">github.com/RonSoeum</a></p>
-            <p class="show-small"><i class="fas fa-phone-square"></i> <a href="tel:210-412-4670"><span class="phone-number">(210) 412-4670</span><span class="phone">Phone</span></a></p>
-            <p class="show-small"><i class="fas fa-envelope-square"></i> <a href="mailto:RonSoeum@gmail.com">Email</a></p>
-            <p class="show-small"><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/ron-soeum" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
-            <p class="show-small"><i class="fab fa-git-square"></i> <a href="https://github.com/RonSoeum" target="_blank" rel="noopener noreferrer">GitHub</a></p>
-        </div>
-        <div class="item-2">
-            <h3>ABOUT ME</h3>
-            <hr />
-            <p class="justify">One of the most satisfying aspects of programming is creating something out of nothing that is useful to people, especially if it improves their lives in some way. I love the challenge of problem-solving, there is a sense of fulfillment after finding a creative solution. The ever-evolving nature of web development keeps me engaged with new technologies, and there is no limit to what I can learn to improve my craft.</p>
-        </div>
-        <div class="item-3">
-            <h3>EDUCATION</h3>
-            <hr />
-            <p class="bold justify">Codeup
-                <br /><span class="no-style">Fully-immersive, project-based, and intensive 18 week full stack Java career accelerator that provides students with 600+ hours of expert instruction in software development.</span>
-                <br /><span class="no-style">2018 &#8211; 2019</span></p>
-            <p class="bold">Associate in Health Sciences
-                <br /><span class="italic">Kaplan University (now Purdue)</span>
-                <br /><span class="no-style">2014 &#8211; 2016</span></p>
-        </div>
-        <div class="item-4">
-            <h3>DEVELOPMENT PROJECTS</h3>
-            <hr />
-            <p class="justify"><span class="float-left"><a href="" target="_blank" rel="noopener noreferrer">Classified Adlister</a></span><span class="float-right">Feb 2019</span>
-                <br />A full-stack web application that allow users to post classified advertisements that are grouped into categories similar to craigslist.</p>
-            <p class="justify"><span class="float-left"><a href="https://chase-and-ron-movies-application.glitch.me/" target="_blank" rel="noopener noreferrer">Chase &#38; Ron's Movies</a></span><span class="float-right">Jan 2019</span>
-                <br />A single page web application utilizing AJAX request that allow users to add, edit, and delete movies, as well as rate them.</p>
-            <p class="justify"><span class="float-left"><a href="https://weather-atmosphere.glitch.me" target="_blank" rel="noopener noreferrer">Weather &#38; Atmosphere</a></span><span class="float-right">Dec 2018</span>
-                <br />A 3-day weather forecast that uses a combination of Open Weather Map and Google Maps API.</p>
-        </div>
-        <div class="item-5">
-            <h3>SKILLS</h3>
-            <hr />
-            <p class="justify">HTML &#8211;&#8211; CSS &#8211;&#8211; Bootstrap &#8211;&#8211; JavaScript &#8211;&#8211; jQuery &#8211;&#8211; Java &#8211;&#8211; MySQL &#8211;&#8211; Spring Boot</p>
-            <p>Command Line &#8211;&#8211; Git/GitHub &#8211;&#8211; Pair Programming</p>
-            <p class="justify">EMT-B Certificate (expired)
-                <br />BLS Certificate (expired)</p>
-            <h3 style="margin-top: 35px;">OTHER</h3>
-            <hr />
-            <p>Secret Security Clearance (active)</p>
-        </div>
-        <div class="item-6">
-            <h3>EXPERIENCE</h3>
-            <hr />
-            <p class="justify"><span class="float-left bold">Refrigeration Technician Intern</span><span class="float-right">Aug 2017 &#8211; Aug 2018</span>
-                <br /><span class="italic">HEB, Inc.</span>
-                <br />Operated and maintained the ammonia refrigeration systems for several manufacturing plants and warehouses on multiple HEB campuses.</p>
-            <p class="justify"><span class="float-left bold">Combat Medic</span><span class="float-right">Mar 2013 &#8211; Mar 2017</span>
-                <br /><span class="italic">US Army</span>
-                <br />Primarily responsible for providing emergency medical treatment at point of wounding on the battlefield, limited primary care, and health protection and evacuation from a point of injury or illness.</p>
-            <p class="justify"><span class="float-left bold">Telecommunications Technician</span><span class="float-right">Mar 2006 &#8211; Apr 2012</span>
-                <br /><span class="italic">Amtec, LLC</span>
-                <br />Installed residential and commercial internet, phone, and cable TV for Comcast customers.</p>
-        </div>
-    </section><!--Grid Container End-->
+        <section class="grid-container">
+            <div class="item-1">
+                <h3>INFO</h3>
+                <hr />
+                <p class="show-big"><i class="fas fa-phone-square"></i> <a href="tel:210-412-4670">(210) 412-4670</a>
+                    <br /><i class="fas fa-envelope-square"></i> <a href="mailto:RonSoeum@gmail.com">RonSoeum@gmail.com</a>
+                    <br /><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/ron-soeum" target="_blank" rel="noopener noreferrer">LinkedIn.com/in/Ron-Soeum</a>
+                    <br /><i class="fab fa-git-square"></i> <a href="https://github.com/RonSoeum" target="_blank" rel="noopener noreferrer">GitHub.com/RonSoeum</a>
+                    <br /><i class="far fa-file-pdf"></i> <a href="/pdf/ron-soeum-resume.pdf" target="_blank" rel="noopener noreferrer">Download Resume</a></p>
+                <p class="show-small"><i class="fas fa-phone-square"></i> <a href="tel:210-412-4670"><span class="phone-number">(210) 412-4670</span><span class="phone">Phone</span></a></p>
+                <p class="show-small"><i class="fas fa-envelope-square"></i> <a href="mailto:RonSoeum@gmail.com">Email</a></p>
+                <p class="show-small"><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/ron-soeum" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+                <p class="show-small"><i class="fab fa-git-square"></i> <a href="https://github.com/RonSoeum" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+                <p class="show-small"><i class="far fa-file-pdf"></i> <a href="/pdf/ron-soeum-resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></p>
+            </div>
+            <div class="item-2">
+                <h3>ABOUT ME</h3>
+                <hr />
+                <p class="justify">One of the most satisfying aspects of programming is creating something out of nothing that is useful to people, especially if it improves their lives in some way. I love the challenge of problem-solving, there is a sense of fulfillment after finding a creative solution. The ever-evolving nature of web development keeps me engaged with new technologies, and there is no limit to what I can learn to improve my craft.</p>
+            </div>
+            <div class="item-3">
+                <h3>EDUCATION</h3>
+                <hr />
+                <p class="bold justify">Codeup
+                    <br /><span class="no-style">Fully-immersive, project-based, and intensive 18 week full stack Java career accelerator that provides students with 600+ hours of expert instruction in software development.</span>
+                    <br /><span class="no-style">2018 &#8211; 2019</span></p>
+                <p class="bold">Associate in Health Sciences
+                    <br /><span class="italic">Kaplan University (now Purdue)</span>
+                    <br /><span class="no-style">2014 &#8211; 2016</span></p>
+            </div>
+            <div class="item-4">
+                <h3>DEVELOPMENT PROJECTS</h3>
+                <hr />
+                <p class="justify"><span class="float-left"><a href="" target="_blank" rel="noopener noreferrer">Classified Adlister</a></span><span class="float-right">Feb 2019</span>
+                    <br />A full-stack web application that allow users to post classified advertisements that are grouped into categories similar to craigslist.</p>
+                <p class="justify"><span class="float-left"><a href="https://chase-and-ron-movies-application.glitch.me/" target="_blank" rel="noopener noreferrer">Chase &#38; Ron's Movies</a></span><span class="float-right">Jan 2019</span>
+                    <br />A single page web application utilizing AJAX request that allow users to add, edit, and delete movies, as well as rate them.</p>
+                <p class="justify"><span class="float-left"><a href="https://weather-atmosphere.glitch.me" target="_blank" rel="noopener noreferrer">Weather &#38; Atmosphere</a></span><span class="float-right">Dec 2018</span>
+                    <br />A 3-day weather forecast that uses a combination of Open Weather Map and Google Maps API.</p>
+            </div>
+            <div class="item-5">
+                <h3>SKILLS</h3>
+                <hr />
+                <p class="justify">HTML &#8211;&#8211; CSS &#8211;&#8211; Bootstrap &#8211;&#8211; JavaScript &#8211;&#8211; jQuery &#8211;&#8211; Java &#8211;&#8211; MySQL &#8211;&#8211; Spring Boot</p>
+                <p>Command Line &#8211;&#8211; Git/GitHub &#8211;&#8211; Pair Programming</p>
+                <p class="justify">EMT-B Certificate (expired)
+                    <br />BLS Certificate (expired)</p>
+                <h3 style="margin-top: 35px;">OTHER</h3>
+                <hr />
+                <p>Secret Security Clearance (active)</p>
+            </div>
+            <div class="item-6">
+                <h3>EXPERIENCE</h3>
+                <hr />
+                <p class="justify"><span class="float-left bold">Refrigeration Technician Intern</span><span class="float-right">Aug 2017 &#8211; Aug 2018</span>
+                    <br /><span class="italic">HEB, Inc.</span>
+                    <br />Operated and maintained the ammonia refrigeration systems for several manufacturing plants and warehouses on multiple HEB campuses.</p>
+                <p class="justify"><span class="float-left bold">Combat Medic</span><span class="float-right">Mar 2013 &#8211; Mar 2017</span>
+                    <br /><span class="italic">US Army</span>
+                    <br />Primarily responsible for providing emergency medical treatment at point of wounding on the battlefield, limited primary care, and health protection and evacuation from a point of injury or illness.</p>
+                <p class="justify"><span class="float-left bold">Telecommunications Technician</span><span class="float-right">Mar 2006 &#8211; Apr 2012</span>
+                    <br /><span class="italic">Amtec, LLC</span>
+                    <br />Installed residential and commercial internet, phone, and cable TV for Comcast customers.</p>
+            </div>
+        </section><!--Grid Container End-->
 
     <div th:replace="fragments/footer :: footer"></div>
     <div th:replace="fragments/scripts :: scripts"></div>

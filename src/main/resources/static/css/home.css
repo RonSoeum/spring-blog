@@ -154,6 +154,9 @@ a.anchor {
     grid-column: 2/3;
     grid-row: 3/4;
 }
+.fa-file-pdf {
+    padding-left: 1px;
+}
 .bold {
     font-weight: bold;
     font-style: normal;
@@ -220,7 +223,7 @@ a.anchor {
     }
 }
 @media only screen and (max-width: 779px) {
-    .grid-container, footer {
+    .grid-container {
         font-size: .7em;
     }
 }
