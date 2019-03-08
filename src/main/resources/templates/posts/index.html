@@ -20,7 +20,7 @@
     <main>
         <h1>BLOG!</h1>
         <article class="post" th:each="post : ${posts}">
-            <img th:src="@{https://picsum.photos/500/300/?random}" alt="random" />
+            <img th:src="@{${post.image}}" alt="lorem ipsum" />
             <p>on March 3, 2019 | <span>by Ron Soeum</span></p>
             <h3><a th:href="@{/posts/{id}(id=${post.id})}"><span th:text="${post.title}"></span></a></h3>
             <p><span th:text="${post.body}"></span></p>
