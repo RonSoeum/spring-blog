@@ -23,7 +23,6 @@ public class PostController {
 
     @GetMapping("/posts")
     public String getAllPosts(Model model) {
-        // List<Post> posts = PostsList.all();
         model.addAttribute("posts", postDao.findAll());
         return "posts/index";
     }
@@ -37,7 +36,6 @@ public class PostController {
 
     @GetMapping("/posts/{id}")
     public String getPostById(@PathVariable long id, Model model) {
-        // Post post = PostsList.findOne(id);
         model.addAttribute("post", postDao.findOne(id));
         return "posts/show";
     }
@@ -51,8 +49,6 @@ public class PostController {
     @PostMapping("/posts/create")
     public String createPost(@ModelAttribute Post post) {
         User user = userDao.findOne(1L); // just use the first user in the db
-        System.out.println("asd f asfd asdf  asf afds " + post.getUser());
-        System.out.println("adsgdgfsdgsdfgsfdg" + user);
 //        Post newPost = new Post();
 //        post.setTitle("Bike for sale");
 //        post.setBody("7 speed bike in good condition.");
