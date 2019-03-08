@@ -15,14 +15,25 @@ public class Post {
     @Column(nullable = false, length = 2000)
     private String body;
 
+    @Column
+    private String image;
+
     @ManyToOne
     @JoinColumn (name = "user_id")
     private User user;
 
-    public Post(long id, String title, String body, User user) {
+    public Post(long id, String title, String body, String image, User user) {
         this.id = id;
         this.title = title;
         this.body = body;
+        this.image = image;
+        this.user = user;
+    }
+
+    public Post(String title, String body, String image, User user) {
+        this.title = title;
+        this.body = body;
+        this.image = image;
         this.user = user;
     }
 
@@ -57,6 +68,14 @@ public class Post {
 
     public void setBody(String body) {
         this.body = body;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public User getUser() {
