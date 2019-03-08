@@ -11,7 +11,7 @@
             <h2>Software Developer</h2>
             <div class="flex">
                 <button type="button"><a id="link">Resume <i class="fas fa-user ml-1"></i></a></button>
-                <button type="button"><a href="/portfolio">Portfolio <i class="fas fa-laptop-code"></i></a></button>
+                <button type="button"><a th:href="@{/portfolio}">Portfolio <i class="fas fa-laptop-code"></i></a></button>
             </div>
         </div>
     </section>
@@ -22,16 +22,16 @@
             <div class="item-1">
                 <h3>INFO</h3>
                 <hr />
-                <p class="show-big"><i class="fas fa-phone-square"></i> <a href="tel:210-412-4670">(210) 412-4670</a>
-                    <br /><i class="fas fa-envelope-square"></i> <a href="mailto:RonSoeum@gmail.com">RonSoeum@gmail.com</a>
-                    <br /><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/ron-soeum" target="_blank" rel="noopener noreferrer">LinkedIn.com/in/Ron-Soeum</a>
-                    <br /><i class="fab fa-git-square"></i> <a href="https://github.com/RonSoeum" target="_blank" rel="noopener noreferrer">GitHub.com/RonSoeum</a>
-                    <br /><i class="far fa-file-pdf"></i> <a href="/pdf/ron-soeum-resume.pdf" target="_blank" rel="noopener noreferrer">Download Resume</a></p>
-                <p class="show-small"><i class="fas fa-phone-square"></i> <a href="tel:210-412-4670"><span class="phone-number">(210) 412-4670</span><span class="phone">Phone</span></a></p>
-                <p class="show-small"><i class="fas fa-envelope-square"></i> <a href="mailto:RonSoeum@gmail.com">Email</a></p>
-                <p class="show-small"><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/ron-soeum" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
-                <p class="show-small"><i class="fab fa-git-square"></i> <a href="https://github.com/RonSoeum" target="_blank" rel="noopener noreferrer">GitHub</a></p>
-                <p class="show-small"><i class="far fa-file-pdf"></i> <a href="/pdf/ron-soeum-resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></p>
+                <p class="show-big"><i class="fas fa-phone-square"></i> <a th:href="@{tel:210-412-4670}">(210) 412-4670</a>
+                    <br /><i class="fas fa-envelope-square"></i> <a th:href="@{mailto:RonSoeum@gmail.com}">RonSoeum@gmail.com</a>
+                    <br /><i class="fab fa-linkedin"></i> <a th:href="@{https://linkedin.com/in/ron-soeum}" target="_blank" rel="noopener noreferrer">LinkedIn.com/in/Ron-Soeum</a>
+                    <br /><i class="fab fa-git-square"></i> <a th:href="@{https://github.com/RonSoeum}" target="_blank" rel="noopener noreferrer">GitHub.com/RonSoeum</a>
+                    <br /><i class="far fa-file-pdf"></i> <a th:href="@{/pdf/ron-soeum-resume.pdf}" target="_blank" rel="noopener noreferrer">Download Resume</a></p>
+                <p class="show-small"><i class="fas fa-phone-square"></i> <a th:href="@{tel:210-412-4670}"><span class="phone-number">(210) 412-4670</span><span class="phone">Phone</span></a></p>
+                <p class="show-small"><i class="fas fa-envelope-square"></i> <a th:href="@{mailto:RonSoeum@gmail.com}">Email</a></p>
+                <p class="show-small"><i class="fab fa-linkedin"></i> <a th:href="@{https://linkedin.com/in/ron-soeum}" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+                <p class="show-small"><i class="fab fa-git-square"></i> <a th:href="@{https://github.com/RonSoeum}" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+                <p class="show-small"><i class="far fa-file-pdf"></i> <a th:href="@{/pdf/ron-soeum-resume.pdf}" target="_blank" rel="noopener noreferrer">Resume</a></p>
             </div>
             <div class="item-2">
                 <h3>ABOUT ME</h3>
@@ -51,11 +51,11 @@
             <div class="item-4">
                 <h3>DEVELOPMENT PROJECTS</h3>
                 <hr />
-                <p class="justify"><span class="float-left"><a href="" target="_blank" rel="noopener noreferrer">Classified Adlister</a></span><span class="float-right">Feb 2019</span>
+                <p class="justify"><span class="float-left"><a th:href="@{https://github.com/ron-aziz-austin/java-adlister}" target="_blank" rel="noopener noreferrer">Classified Adlister</a></span><span class="float-right">Feb 2019</span>
                     <br />A full-stack web application that allow users to post classified advertisements that are grouped into categories similar to craigslist.</p>
-                <p class="justify"><span class="float-left"><a href="https://chase-and-ron-movies-application.glitch.me/" target="_blank" rel="noopener noreferrer">Chase &#38; Ron's Movies</a></span><span class="float-right">Jan 2019</span>
+                <p class="justify"><span class="float-left"><a th:href="@{https://chase-and-ron-movies-application.glitch.me}" target="_blank" rel="noopener noreferrer">Chase &#38; Ron's Movies</a></span><span class="float-right">Jan 2019</span>
                     <br />A single page web application utilizing AJAX request that allow users to add, edit, and delete movies, as well as rate them.</p>
-                <p class="justify"><span class="float-left"><a href="https://weather-atmosphere.glitch.me" target="_blank" rel="noopener noreferrer">Weather &#38; Atmosphere</a></span><span class="float-right">Dec 2018</span>
+                <p class="justify"><span class="float-left"><a th:href="@{https://weather-atmosphere.glitch.me}" target="_blank" rel="noopener noreferrer">Weather &#38; Atmosphere</a></span><span class="float-right">Dec 2018</span>
                     <br />A 3-day weather forecast that uses a combination of Open Weather Map and Google Maps API.</p>
             </div>
             <div class="item-5">
